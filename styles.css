@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(25, 25, 25);
+    text-align: center;
+  }
+
+  h2 {
+    color: rgb(156, 156, 181);
+    font-family: Verdana;
+    font-size: 200%;
+      }
+
+  .result, .score, .moves {
+    color: rgb(248, 243, 243); /* bepaalt de tekst kleur */ 
+    font-family:verdana;
+    font-size: 25px;;
+    padding: 15px;  /* afstand van de tekst tot de rand binnen de rand */ 
+  }
+
+  .result {
+
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+ .moves-emoticon{
+
+  height: 50px;
+
+ }
+
+ .moves-button{
+
+  background-color: transparent;
+  border-radius: 100px;
+  margin: 50px;
+  padding: 20px;
+  border:1px;
+  border-color: white;
+  border-style: solid;
+  
+ }
+
+ .result-emoticon{
+
+  height: 30px;
+  background-color: transparent;
+  border-radius: 100px;
+  padding: 10px;
+  border: none;
+
+ }
+
+ .moves{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
