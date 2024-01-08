@@ -5,6 +5,8 @@ let resultText = document.querySelector(".result");
 let movesText = document.querySelector(".moves");
 let scoreText = document.querySelector(".score");
 let score = JSON.parse(localStorage.getItem("savedScore"));
+let isAutoPlaying = false;
+let autoPlayBtn = document.querySelector(".autoPlay-button");
 
 if (score === null){
  score = {
@@ -107,3 +109,27 @@ function resetScore(){
   movesText.innerHTML="";
   localStorage.removeItem("savedScore");
 }
+
+function autoplay() {
+
+if (isAutoPlaying == false){
+  isAutoPlaying = true;
+  autoPlayBtn.innerHTML = "Stop Autoplay";
+  myInterval = setInterval(function() {  
+    computerChoice();
+    playermove = computermove;
+    myFunction();}, 2000);    
+    
+
+  }  else {
+
+    clearInterval(myInterval);
+    autoPlayBtn.innerHTML = "Start Autoplay";
+    isAutoPlaying = false;
+
+  }
+
+
+
+}
+
